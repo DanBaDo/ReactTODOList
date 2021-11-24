@@ -64,3 +64,5 @@ dist/*
 !.htaccess
 !.eslintrc
 .now
+
+package-lock.json
