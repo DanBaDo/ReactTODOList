@@ -8,8 +8,17 @@ import "bootstrap";
 //include your index.scss file into the bundle
 import "../styles/index.scss";
 
-//import your own components
-import Home from "./component/home.jsx";
+// Components
+import TaskList from "./component/TaskList.jsx";
+import TaskListPlaceHolder from "./component/TasksListPlaceHolder.jsx";
+import Task from "./component/Task.jsx";
 
 //render your react application
-ReactDOM.render(<Home />, document.querySelector("#app"));
+ReactDOM.render(
+	<TaskList
+		placeHolder="Nueva tarea..."
+		listPlaceHolder={TaskListPlaceHolder}
+		taskComponent={Task}
+	/>,
+	document.querySelector("#app")
+);
