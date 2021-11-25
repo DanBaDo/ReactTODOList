@@ -65,9 +65,9 @@ const TaskList = props => {
 };
 
 TaskList.propTypes = {
-	inputPlaceHolder: PropTypes.string,
-	taskComponent: PropTypes.elementType.isRequired,
-	listPlaceHolder: PropTypes.elementType.isRequired
+	inputPlaceHolder: PropTypes.string, // Text for show in input when it's empty.
+	taskComponent: PropTypes.elementType.isRequired, // Component for each task.
+	listPlaceHolder: PropTypes.elementType.isRequired // Component rendered when it's no tasks.
 };
 
 export default TaskList;

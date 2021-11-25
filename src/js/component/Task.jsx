@@ -23,8 +23,8 @@ const Task = props => {
 };
 
 Task.propTypes = {
-	description: PropTypes.string.isRequired,
-	removeHandler: PropTypes.func
+	description: PropTypes.string.isRequired, // Task text
+	removeHandler: PropTypes.func // Remove function
 };
 
 export default Task;
