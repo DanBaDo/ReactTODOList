@@ -13,7 +13,7 @@ import Task from "./component/Task.jsx";
 // Logic
 ReactDOM.render(
 	<TaskList
-		placeHolder="Nueva tarea..."
+		inputPlaceHolder="Nueva tarea..."
 		listPlaceHolder={TaskListPlaceHolder}
 		taskComponent={Task}
 	/>,

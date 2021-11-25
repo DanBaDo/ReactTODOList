@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 
+// Resources
+import "../../styles/TaskList.scss";
+
+// Component
+
 const TaskList = props => {
 	const [inputVal, setInputVal] = useState("");
 	const [tasksList, setTasksList] = useState([]);
@@ -19,8 +24,9 @@ const TaskList = props => {
 	}
 
 	return (
-		<>
+		<div className="container wrapper  m-3">
 			<input
+				className="rounded-3 me-3"
 				type="text"
 				placeholder={props.inputPlaceHolder}
 				value={inputVal}
@@ -32,12 +38,13 @@ const TaskList = props => {
 				}}
 			/>
 			<button
+				className="rounded-3"
 				onClick={() => {
 					addTask();
 				}}>
 				+
 			</button>
-			<ul>
+			<ul className="p-5  my-3 rounded-3">
 				{tasksList.length
 					? tasksList.map((task, idx) =>
 							React.cloneElement(
@@ -53,7 +60,7 @@ const TaskList = props => {
 					: props.listPlaceHolder()}
 			</ul>
 			<p>{tasksList.length} items</p>
-		</>
+		</div>
 	);
 };
 
